@@ -5,6 +5,17 @@ import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 // ...GatsbyImageSharpFluid
 
+const query = graphql`
+  query ImageQuery {
+    file(relativePath: {eq: "hero-img.png"}) {
+      childImageSharp{
+       fluid{
+        ...GatsbyImageSharpFluid
+      	}
+      }
+    }
+  }
+`
 const Hero = () => {
   return <h2>hero component</h2>
 }

@@ -8,4 +8,19 @@ const Jobs = () => {
   return <h2>jobs component</h2>
 }
 
+export const query = graphql`
+  {
+    allStrapiJobs(sort: {fields: id, order: ASC}) {
+      nodes {
+        date
+        company
+        position
+        desc {
+          id
+          name
+        }
+      }
+    }
+  }
+`
 export default Jobs

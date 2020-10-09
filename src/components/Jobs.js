@@ -13,7 +13,7 @@ const Jobs = () => {
 
   const { date, company, position, desc } = jobs[value];
 
-  console.log(date, company, position, desc)
+  // console.log(date, company, position, desc)
   return (
     <section className="section jobs">
       <Title title="expierence" />
@@ -40,7 +40,7 @@ const Jobs = () => {
           })}
         </article>
       </div>
-      <Link to="/about" className="btn certer-btn">more info</Link>
+      <Link to="/about" className="btn center-btn">more info</Link>
     </section>
   )
 }

@@ -31,7 +31,7 @@ export const query = graphql`
   }
 `
 const ProjectsPage = ({data: {allStrapiProjects: {nodes: projects}}}) => {
-  console.log(projects)
+  // console.log(projects)
   return (
     <Layout>
       <section className="projects-page">

@@ -5,15 +5,14 @@ import { FaTimes } from "react-icons/fa"
 
 const Sidebar = ({isOpen, toggleSideBar}) => {
   // const isOpen = false;
-
   return(
     <aside className={`sidebar ${isOpen ? "show-sidebar" : ""}`}>
       <button className="close-btn" onClick={toggleSideBar}>
         <FaTimes />
       </button>
       <div>
-        <Links styleClass="sidebar-links" />
-        <SocialLinks styleClass="sidebar-icons" />
+        <Links styleClass={ `${isOpen ? "sidebar-links" : ""}` } />
+        <SocialLinks styleClass={`${isOpen ? "sidebar-icons" : ''}`} />
       </div>
     </aside>
   )

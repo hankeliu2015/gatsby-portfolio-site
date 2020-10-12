@@ -6,6 +6,8 @@ import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
+import SEO from "../components/SEO"
+
 export default ({data}) => {
   const {
     allStrapiProjects:{nodes:projects},
@@ -14,6 +16,7 @@ export default ({data}) => {
   // const projects = data.allStrapiProjects.nodes;
   return (
     <Layout>
+      <SEO title="home" description="this is the home page"/>
       <Hero />
       <Services />
       <Jobs />
